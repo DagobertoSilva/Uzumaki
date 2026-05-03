@@ -25,8 +25,14 @@ p{
 nav{
     background-color: dodgerblue;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: center;
+}
+
+#log, ul{
+    margin-left: 140px;
+    padding: 6px;
 }
 
 ul{
@@ -38,7 +44,53 @@ ul{
 ul li{
     padding: 10px;
 }
+
+ #dashbord{
+    border-bottom: 2px solid #fff;
+}
+
 ul a{
     color: #fff;
     text-decoration: none;
+}
+
+main{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.container-metas{
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.metas{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    height: 95px;
+    width: 395px;
+    align-items: first baseline;
+    justify-content: center;
+    margin-top: 50px;
+    border-radius: 6px;
+}
+
+.metas h2,h4{
+    margin-left: 20px;
+}
+
+#progresso{
+    height: 200px;
+    margin-top: 20px;
+    background-color: aqua;
+    display: flex;
+    width: 80%;
+    border-radius: 6px;
 }
