@@ -3,10 +3,15 @@
     padding: 0;
 }
 
+body {
+        font-family: Arial, sans-serif;
+}
+
 a,h3,p{
      font-weight: bold;
      color: #fff;
 }
+
 
 h3{
     font-size: 3em;
@@ -45,7 +50,7 @@ ul li{
     padding: 10px;
 }
 
- #dashbord{
+#dashbord{
     border-bottom: 2px solid #fff;
 }
 
@@ -55,16 +60,16 @@ ul a{
 }
 
 main{
-    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    padding: 20px;
 }
 
 .container-metas{
     display: flex;
     width: 80%;
+    margin-left: 0;
     justify-content: space-around;
     align-items: center;
     text-align: center;
@@ -75,10 +80,11 @@ main{
     display: flex;
     flex-direction: column;
     height: 95px;
-    width: 395px;
+    width: 380px;
     align-items: first baseline;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     border-radius: 6px;
 }
 
@@ -87,10 +93,42 @@ main{
 }
 
 #progresso{
-    height: 200px;
+      border: 1px solid black;
+    height: auto;
     margin-top: 20px;
-    background-color: aqua;
     display: flex;
-    width: 80%;
+    flex-direction: column;
+    width: 90%;
     border-radius: 6px;
+    
+}
+
+#progresso h4{
+    font-size: 25px;
+    padding: 10px;
+    margin-left: 5px;
+}
+
+.item-materia{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+.barra {
+    width: auto;
+    height: 12px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 0px;
+    margin-left: 18px;
+    margin-right: 18px;
 }
