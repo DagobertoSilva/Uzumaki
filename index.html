@@ -1,87 +1,362 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Uzumaki - Estudos</title>
+    <title>Planejador de Estudos Inteligente</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+
+        body{
+            background:#f5f7fb;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        .navbar-custom{
+            background:white;
+            border-bottom:1px solid #e9ecef;
+        }
+
+        .brand-title{
+            font-size:34px;
+            font-weight:700;
+        }
+
+        .subtitle{
+            color:#6c757d;
+            margin-top:-8px;
+            font-size:15px;
+        }
+
+        .menu{
+            margin-top:20px;
+        }
+
+        .menu .nav-link{
+            color:#495057;
+            font-weight:500;
+            margin-right:20px;
+        }
+
+        .menu .nav-link.active{
+            color:#2563eb;
+            border-bottom:3px solid #2563eb;
+        }
+
+        .card-dashboard{
+            border:none;
+            border-radius:15px;
+            box-shadow:0 3px 10px rgba(0,0,0,.06);
+        }
+
+        .icon-box{
+            width:60px;
+            height:60px;
+            border-radius:15px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:30px;
+        }
+
+        .icon-blue{
+            background:#dbeafe;
+            color:#2563eb;
+        }
+
+        .icon-green{
+            background:#dcfce7;
+            color:#16a34a;
+        }
+
+        .icon-purple{
+            background:#f3e8ff;
+            color:#9333ea;
+        }
+
+        .dashboard-number{
+            font-size:40px;
+            font-weight:bold;
+        }
+
+        .section-card{
+            background:white;
+            border:none;
+            border-radius:15px;
+            padding:30px;
+            box-shadow:0 3px 10px rgba(0,0,0,.06);
+        }
+
+        .progress{
+            height:14px;
+            border-radius:10px;
+            background:#e9ecef;
+        }
+
+        .task-card{
+            border-left:5px solid #facc15;
+            background:#fff;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 2px 8px rgba(0,0,0,.05);
+        }
+
+    </style>
+
 </head>
 <body>
-    <nav>
-        <div id="logo">
-            <h3>UZUMAKI</h3>
-            <p>Organize seus estudos e alcance seus objetivos </p>
+
+<div class="container-fluid p-0">
+
+    <!-- Cabeçalho -->
+
+    <div class="navbar-custom p-4">
+
+        <div class="container-fluid">
+
+            <h2 class="brand-title mb-0">
+                📚 Planejador de Estudos Inteligente
+            </h2>
+
+            <div class="subtitle">
+                Organize seus estudos e alcance seus objetivos
+            </div>
+
+            <ul class="nav menu">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="materias.html">
+                        <i class="bi bi-book"></i>
+                        Matérias
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="tarefas.html">
+                        <i class="bi bi-check2-square"></i>
+                        Tarefas
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="pomodoro.html">
+                        <i class="bi bi-clock"></i>
+                        Timer
+                    </a>
+                </li>
+
+            </ul>
+
         </div>
 
-        <ul>
-            <li><a href="index.html" id="dashbord">Dashboard</a></li>
-            <li><a href="">Matérias</a></li>
-            <li><a href="">Tarefas</a></li>
-            <li><a href="">Pomodoro Timer</a></li>
-        </ul>
-    </nav>
-    <main>
-        <div class="container-metas">
-            <div class="metas">
-                <h4>Horas Estudadas</h4>
-                <h2>40.0h</h2>   
-            </div>
+    </div>
 
-            <div class="metas">
-                <h4>Meta Total</h4>
-                <h2>120h</h2>  
-            </div>
+    <!-- Conteúdo -->
 
-            <div class="metas">
-                <h4>Tarefas Concluídas</h4>
-                <h2>0/3</h2> 
-            </div>
-        </div>
+    <div class="container-fluid mt-4">
 
-        <div id="progresso">
-            <h4>Progresso por matéria</h4>
+        <!-- Cards -->
 
-            <div class="item-materia">
-                <div class="topo">
-                    <span>Materia 1</span>
-                    <span>12h / 48h</span>
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="card-dashboard p-4">
+
+                    <div class="d-flex align-items-center">
+
+                        <div class="icon-box icon-blue">
+                            <i class="bi bi-clock-history"></i>
+                        </div>
+
+                        <div class="ms-4">
+
+                            <div class="text-secondary">
+                                Horas Estudadas
+                            </div>
+
+                            <div class="dashboard-number">
+                                40.0h
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
-                
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card-dashboard p-4">
+
+                    <div class="d-flex align-items-center">
+
+                        <div class="icon-box icon-green">
+                            <i class="bi bi-bullseye"></i>
+                        </div>
+
+                        <div class="ms-4">
+
+                            <div class="text-secondary">
+                                Meta Total
+                            </div>
+
+                            <div class="dashboard-number">
+                                120h
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card-dashboard p-4">
+
+                    <div class="d-flex align-items-center">
+
+                        <div class="icon-box icon-purple">
+                            <i class="bi bi-check2-square"></i>
+                        </div>
+
+                        <div class="ms-4">
+
+                            <div class="text-secondary">
+                                Tarefas Concluídas
+                            </div>
+
+                            <div class="dashboard-number">
+                                0/3
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Progresso -->
+
+        <div class="section-card mt-4">
+
+            <h2 class="mb-4">
+                Progresso por Matéria
+            </h2>
+
+            <div class="mb-4">
+
+                <div class="d-flex justify-content-between">
+
+                    <strong>Cálculo I</strong>
+
+                    <span>12.0h / 40h</span>
+
+                </div>
+
+                <div class="progress mt-2">
+
+                    <div class="progress-bar bg-primary"
+                         style="width:30%;">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="mb-4">
+
+                <div class="d-flex justify-content-between">
+
+                    <strong>Física</strong>
+
+                    <span>8.0h / 30h</span>
+
+                </div>
+
+                <div class="progress mt-2">
+
+                    <div class="progress-bar bg-success"
+                         style="width:27%;">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <div class="d-flex justify-content-between">
+
+                    <strong>Programação</strong>
+
+                    <span>20.0h / 50h</span>
+
+                </div>
+
+                <div class="progress mt-2">
+
+                    <div class="progress-bar bg-warning"
+                         style="width:40%;">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Próximas tarefas -->
+
+        <div class="section-card mt-4 mb-5">
+
+            <h2 class="mb-4">
+                Próximas Tarefas
+            </h2>
+
+            <div class="task-card">
+
+                <h5 class="mb-1">
+                    Estudar cinemática
+                </h5>
+
+                <span class="text-secondary">
+                    Física • 27 de Julho
+                </span>
+
+            </div>
+
             
-                <div class="barra">
-                    <div class="progresso-materia1"></div>
-                </div>
-            </div>
-
-            <div class="item-materia">
-                <div class="topo">
-                    <span>Materia 1</span>
-                    <span>12h / 48h</span>
-                </div>
-                
-            
-                <div class="barra">
-                    <div class="progresso-materia1"></div>
-                </div>
-            </div>
-
-            <div class="item-materia">
-                <div class="topo">
-                    <span>Materia 1</span>
-                    <span>12h / 48h</span>
-                </div>
-                
-            
-                <div class="barra">
-                    <div class="progresso-materia1"></div>
-                </div>
-            </div>
-        </div>
-
-        <div id="progresso">
-            <h4>Próximas Tarefas </h4>
 
         </div>
-    </main>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

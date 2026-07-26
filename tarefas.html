@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Planejador de Estudos</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+
+body{
+    background:#f5f7fb;
+    font-family:"Segoe UI",sans-serif;
+}
+
+header{
+    background:#fff;
+    border-bottom:1px solid #e9ecef;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:700;
+}
+
+.subtitle{
+    color:#6c757d;
+}
+
+.nav-link{
+    color:#495057;
+    font-weight:500;
+    margin-right:20px;
+}
+
+.nav-link.active{
+    color:#2563eb !important;
+    border-bottom:3px solid #2563eb;
+}
+
+.card-custom{
+    border:none;
+    border-radius:16px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.task-card{
+
+    background:#fff;
+    border:1px solid #e9ecef;
+    border-radius:12px;
+    padding:18px;
+    transition:.2s;
+
+}
+
+.task-card:hover{
+
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+}
+
+.priority{
+
+    width:4px;
+    border-radius:4px;
+    margin-right:14px;
+
+}
+
+.priority-media{
+    background:#f4b400;
+}
+
+.priority-alta{
+    background:#ef4444;
+}
+
+.priority-baixa{
+    background:#22c55e;
+}
+
+.task-title{
+
+    font-size:1.35rem;
+    font-weight:600;
+
+}
+
+.subject{
+
+    font-weight:500;
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header class="p-4">
+
+<div class="container-fluid">
+
+<div class="logo">
+📚 Planejador de Estudos Inteligente
+</div>
+
+<div class="subtitle">
+Organize seus estudos e alcance seus objetivos
+</div>
+
+<ul class="nav mt-4">
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">
+<i class="bi bi-graph-up"></i>
+Dashboard
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="materias.html">
+<i class="bi bi-book"></i>
+Matérias
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="tarefas.html">
+<i class="bi bi-check2-square"></i>
+Tarefas
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="pomodoro.html">
+<i class="bi bi-clock"></i>
+Timer
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</header>
+
+<div class="container-fluid mt-4">
+
+<!-- Adicionar -->
+
+<div class="card card-custom p-4 mb-4">
+
+<h2 class="h3 mb-4">
+Adicionar Tarefa
+</h2>
+
+<div class="row g-3">
+
+<div class="col-lg-5">
+
+<input
+class="form-control form-control-lg"
+placeholder="Título da tarefa">
+
+</div>
+
+<div class="col-lg-2">
+
+<select class="form-select form-select-lg">
+
+<option>Selecione a matéria</option>
+<option>Cálculo I</option>
+<option>Física</option>
+<option>Programação</option>
+
+</select>
+
+</div>
+
+<div class="col-lg-2">
+
+<input
+type="date"
+class="form-control form-control-lg">
+
+</div>
+
+<div class="col-lg-1">
+
+<select class="form-select form-select-lg">
+
+<option>Baixa</option>
+<option selected>Média</option>
+<option>Alta</option>
+
+</select>
+
+</div>
+
+<div class="col-lg-2 d-grid">
+
+<button class="btn btn-primary btn-lg">
+
+<i class="bi bi-plus-lg"></i>
+
+Adicionar
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Lista -->
+
+<div class="card card-custom p-4">
+
+<h2 class="mb-4">
+Minhas Tarefas
+</h2>
+
+<!-- Item -->
+
+<div class="task-card d-flex align-items-center mb-3">
+
+<div>
+
+<input
+class="form-check-input fs-4"
+type="checkbox">
+
+</div>
+
+<div class="priority priority-media ms-3"></div>
+
+<div class="flex-grow-1">
+
+<div class="task-title">
+
+Estudar cinemática
+
+</div>
+
+<div>
+
+<span class="subject text-success">
+Física
+</span>
+
+•
+
+27/07/2026
+
+</div>
+
+</div>
+
+<button class="btn btn-sm text-danger">
+
+<i class="bi bi-trash"></i>
+
+</button>
+
+</div>
+
+<!-- Item -->
+
+<div class="task-card d-flex align-items-center mb-3">
+
+<div>
+
+<input
+class="form-check-input fs-4"
+type="checkbox">
+
+</div>
+
+<div class="priority priority-alta ms-3"></div>
+
+<div class="flex-grow-1">
+
+<div class="task-title">
+
+Resolver lista de integrais
+
+</div>
+
+<div>
+
+<span class="subject text-primary">
+Cálculo I
+</span>
+
+•
+
+28/07/2026
+
+</div>
+
+</div>
+
+<button class="btn btn-sm text-danger">
+
+<i class="bi bi-trash"></i>
+
+</button>
+
+</div>
+
+<!-- Item -->
+
+<div class="task-card d-flex align-items-center">
+
+<div>
+
+<input
+class="form-check-input fs-4"
+type="checkbox">
+
+</div>
+
+<div class="priority priority-alta ms-3"></div>
+
+<div class="flex-grow-1">
+
+<div class="task-title">
+
+Projeto final de programação
+
+</div>
+
+<div>
+
+<span class="subject text-warning">
+Programação
+</span>
+
+•
+
+02/08/2026
+
+</div>
+
+</div>
+
+<button class="btn btn-sm text-danger">
+
+<i class="bi bi-trash"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

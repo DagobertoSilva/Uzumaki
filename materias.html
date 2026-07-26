@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Planejador de Estudos Inteligente</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+
+body{
+    background:#f5f7fb;
+    font-family:'Segoe UI',sans-serif;
+}
+
+header{
+    background:#fff;
+    border-bottom:1px solid #e9ecef;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:700;
+}
+
+.subtitulo{
+    color:#6c757d;
+    margin-top:-8px;
+}
+
+.nav-link{
+    color:#495057;
+    font-weight:500;
+    margin-right:20px;
+}
+
+.nav-link.active{
+    color:#2563eb !important;
+    border-bottom:3px solid #2563eb;
+}
+
+.card-custom{
+    border:none;
+    border-radius:16px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.progress{
+    height:10px;
+    background:#e9ecef;
+}
+
+.progress-bar{
+    border-radius:10px;
+}
+
+.materia-icon{
+    width:16px;
+    height:16px;
+    border-radius:4px;
+    display:inline-block;
+    margin-right:10px;
+}
+
+.input-color{
+    width:80px;
+    height:40px;
+}
+
+</style>
+
+</head>
+<body>
+
+<header class="p-4">
+
+<div class="container-fluid">
+
+<div class="logo">
+📚 Planejador de Estudos Inteligente
+</div>
+
+<div class="subtitulo">
+Organize seus estudos e alcance seus objetivos
+</div>
+
+<ul class="nav mt-4">
+
+<li class="nav-item">
+<a class="nav-link" href="#">
+<i class="bi bi-graph-up"></i>
+Dashboard
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="materias.html">
+<i class="bi bi-book"></i>
+Matérias
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="tarefas.html">
+<i class="bi bi-check2-square"></i>
+Tarefas
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="pomodoro.html">
+<i class="bi bi-clock"></i>
+Timer
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</header>
+
+<div class="container-fluid mt-4">
+
+<!-- Adicionar matéria -->
+
+<div class="card card-custom p-4 mb-4">
+
+<h2 class="h3 mb-4">
+Adicionar Matéria
+</h2>
+
+<div class="row g-3">
+
+<div class="col-lg">
+<input
+class="form-control form-control-lg"
+placeholder="Nome da matéria">
+</div>
+
+<div class="col-auto">
+<input
+type="color"
+class="form-control form-control-color input-color"
+value="#3b82f6">
+</div>
+
+<div class="col-md-2">
+<input
+class="form-control form-control-lg"
+type="number"
+value="20">
+</div>
+
+<div class="col-auto">
+
+<button class="btn btn-primary btn-lg px-4">
+
+<i class="bi bi-plus-lg"></i>
+
+Adicionar
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Cards -->
+
+<div class="row g-4">
+
+<!-- Card -->
+
+<div class="col-md-4">
+
+<div class="card card-custom p-4">
+
+<div class="d-flex justify-content-between align-items-center">
+
+<h4>
+
+<span
+class="materia-icon"
+style="background:#3b82f6">
+</span>
+
+Cálculo I
+
+</h4>
+
+<button class="btn btn-sm text-danger">
+
+<i class="bi bi-trash"></i>
+
+</button>
+
+</div>
+
+<div class="mt-3">
+
+<div class="d-flex justify-content-between">
+
+<span>Progresso</span>
+
+<span>30%</span>
+
+</div>
+
+<div class="progress mt-2">
+
+<div
+class="progress-bar bg-primary"
+style="width:30%">
+</div>
+
+</div>
+
+<div class="text-secondary mt-2">
+
+12.0h de 40h
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Física -->
+
+<div class="col-md-4">
+
+<div class="card card-custom p-4">
+
+<div class="d-flex justify-content-between align-items-center">
+
+<h4>
+
+<span
+class="materia-icon"
+style="background:#10b981">
+</span>
+
+Física
+
+</h4>
+
+<button class="btn btn-sm text-danger">
+
+<i class="bi bi-trash"></i>
+
+</button>
+
+</div>
+
+<div class="mt-3">
+
+<div class="d-flex justify-content-between">
+
+<span>Progresso</span>
+
+<span>27%</span>
+
+</div>
+
+<div class="progress mt-2">
+
+<div
+class="progress-bar bg-success"
+style="width:27%">
+</div>
+
+</div>
+
+<div class="text-secondary mt-2">
+
+8.0h de 30h
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Programação -->
+
+<div class="col-md-4">
+
+<div class="card card-custom p-4">
+
+<div class="d-flex justify-content-between align-items-center">
+
+<h4>
+
+<span
+class="materia-icon"
+style="background:#f59e0b">
+</span>
+
+Programação
+
+</h4>
+
+<button class="btn btn-sm text-danger">
+
+<i class="bi bi-trash"></i>
+
+</button>
+
+</div>
+
+<div class="mt-3">
+
+<div class="d-flex justify-content-between">
+
+<span>Progresso</span>
+
+<span>40%</span>
+
+</div>
+
+<div class="progress mt-2">
+
+<div
+class="progress-bar bg-warning"
+style="width:40%">
+</div>
+
+</div>
+
+<div class="text-secondary mt-2">
+
+20.0h de 50h
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
